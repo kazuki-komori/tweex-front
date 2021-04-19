@@ -6,8 +6,8 @@
   </div>
 </template>
 <script>
-import AppContainer from '../components/layout/AppContainer'
+import AppContainer from "../components/layout/AppContainer"
 export default {
-  components: { AppContainer },
+  components: { AppContainer }
 }
 </script>
