@@ -1,5 +1,5 @@
 <template>
-  <section class="c-container w-full mx-auto">
+  <section class="c-container w-full mx-auto px-1">
     <slot />
   </section>
 </template>
