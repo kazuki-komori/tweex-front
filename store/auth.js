@@ -5,26 +5,25 @@ export const authMapper = createNamespacedHelpers("auth")
 
 export const state = () => {
   return {
-    profile: null
+    profile: null,
   }
 }
 
-export const getters = {
-}
+export const getters = {}
 
 export const mutations = {
-  async SET_PROFILE (state, {profile}) {
+  async SET_PROFILE(state, { profile }) {
     state.profile = { ...profile }
-  }
+  },
 }
 
 export const actions = {
-  async Login () {
+  async Login() {
     const auth = new AuthService(this.$fb)
     await auth.signup()
   },
 
-  async SetProfile ({commit}) {
+  async SetProfile({ commit }) {
     const res = await this.$fb.auth().getRedirectResult()
     console.log(res)
     if (!res?.user?.uid) {
@@ -35,5 +34,5 @@ export const actions = {
     profile["display_name"] = user.displayName
     profile["uid"] = user.uid
     commit("SET_PROFILE", { profile })
-  }
+  },
 }
