@@ -27,7 +27,10 @@
             </span>
           </div>
         </div>
-        <div class="grid grid-cols-6 sm:gap-6 gap-2">
+        <div class="flex justify-center sm:w-full py-5">
+          <ColorPicker />
+        </div>
+        <div class="grid grid-cols-6 sm:gap-6 gap-2 py-5">
           <div v-for="_ in 6" :key="_" class="sm:col-span-2 col-span-3">
             <CategoryCard />
           </div>
@@ -40,9 +43,10 @@
 import AppContainer from "@/components/layout/AppContainer"
 import SecHero from "@/pages/category/-SecHero"
 import CategoryCard from "@/components/molecules/CategoryCard"
+import ColorPicker from "@/components/atoms/ColorPicker"
 
 export default {
-  components: { CategoryCard, SecHero, AppContainer },
+  components: { ColorPicker, CategoryCard, SecHero, AppContainer },
 }
 </script>
 <style scoped></style>
