@@ -7,12 +7,15 @@
         </div>
       </section>
       <Modal v-if="isModalShow" @close="isModalShow = false">
-        <img :src="previewURL" alt="" />
+        <img
+          class="block mx-auto object-cover h-full"
+          :src="previewURL"
+          alt=""
+        />
       </Modal>
     </AppContainer>
   </section>
 </template>
-
 <script>
 import { authMapper } from "@/store/auth"
 import TwitterCard from "@/components/molecules/TwitterCard"
@@ -42,3 +45,13 @@ export default {
   },
 }
 </script>
+<style scoped>
+/*.p-img {*/
+/*  height: 180px;*/
+/*}*/
+/*@media (max-width: 639px) {*/
+/*  .p-img {*/
+/*    height: 100px;*/
+/*  }*/
+/*}*/
+</style>

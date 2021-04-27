@@ -13,6 +13,7 @@
 <style scoped>
 .modal {
   width: 600px;
+  height: 450px;
 }
 .overlay {
   overflow-y: hidden;
@@ -21,6 +22,7 @@
 @media (max-width: 639px) {
   .modal {
     width: 250px;
+    height: 300px;
   }
 }
 </style>
